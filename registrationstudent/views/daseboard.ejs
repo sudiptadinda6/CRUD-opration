@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>updated</title>
+</head>
+<body>
+    <h1>UPDATED YOUR STUDENT PROFILE</h1>
+    <form method="post" action="/update" enctype="multipart/form-data">
+        <input type="text" value="<%=id%>" name="ida" hidden >
+        NAME:<input type="text" name="name" value="<%=name %>" ><br>
+        ADDRESS:<input type="text" name="address" value="<%=address %>" ><br>
+        EMAIL:<input type="text" name="email" value="<%=email %>"><br>
+        CONTACT NUMBER:<input type="number" name="number" value="<%=number %>" ><br>
+        GANDER:<input type="radio" name="gander"  value="MALE" <%= gander=='MALE' ? 'checked' : '' %> > MALE
+                <input type="radio" name="gander" value="FEMALE" <%= gander=='FEMALE' ? 'checked' : '' %> >FEMALE 
+                <input type="radio" name="gander" value="OTHERS" <%= gander=='OTHERS' ? 'checked' : '' %> >OTHERS <br>
+        DAGREE:<select name="dagree">
+            <option value="select" <%= dagree=='select' ? 'selected' : '' %>>select</option>
+            <option value="b.tech"<%= dagree=='b.tech' ? 'selected' : '' %> >b.tech</option>
+            <option value="b.a" <%= dagree=='b.a' ? 'selected' : '' %> >b.a</option>
+            <option value="b.com" <%= dagree=='b.com' ? 'selected' : '' %>>b.com</option>
+            <option value="m.com" <%= dagree=='m.com' ? 'selected' : '' %> >m.com</option>
+            </select><br>
+            LANGUAGE:<input type="checkbox" value="BENGALI" name="language" <%= language.includes('BENGALI') ? 'checked' :''%> >BENGALI
+                     <input type="checkbox" value="ENGLISH" name="language" <%= language.includes('ENGLISH') ? 'checked' :''%> >ENGLISH
+                     <input type="checkbox" value="HINDI" name="language" <%= language.includes('HINDI') ? 'checked':''%> >HINDI<br>
+        UPLOAD FILE:<input type="file" name="image"><img src="/download?id=<%=id%>" alt="rose" height="60" width="60"/><br>
+        <button type="submit">UPDATED</button>
+    </form>
+</body>
+</html>

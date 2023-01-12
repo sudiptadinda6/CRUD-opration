@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin display</title>
+</head>
+<body>
+    <h1>WELCOME TO ADMIN !!!!</h1>
+    <table border="1">
+        <tr>
+            <th>SL_NO</th>
+            <th>NAME</th>
+            <th>ADDRESS</th>
+            <th>EMAIL</th>
+            <th>PASSWORD</th>
+            <th>NUMBER</th>
+            <th>GANDER</th>
+            <th>DAGREE</th>
+            <th>LANGUAGE</th>
+            <th>PHOTO</th>
+            <th>ACTION</th>
+        </tr>
+        <% user.forEach((y)=>{%>
+        <tr>
+            <th><%=i++%></th>
+            <th><%=y.name%></th>
+            <th><%=y.address%></th>
+            <th><%=y.email%></th>
+            <th><%=y.password%></th>
+            <th><%=y.number%></th>
+            <th><%=y.gander%></th>
+            <th><%=y.dagree%></th>
+            <th><%=y.language%></th>
+            <th><img src="/download?id=<%=y._id%>" height="30" width="30"/></th>
+            <th><a href="/update?id=<%=y._id%>"><button>UPDATED</button></a>
+                <a href="/deleted?id=<%=y._id%>"><button>DELETED</button></a></th>
+        </tr>
+        <%})%>
+    </table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viewdata</title>
+</head>
+<body>
+    <table border="1" align="center">
+        <tr><th colspan="9">STUDENT DETAILES IN TABLE </th></tr>
+        <tr>
+            <td>NAME</td>
+            <td>ADDRESS</td>
+            <td>EMAIL</td>
+            <td>CONTACT_NUMBER</td>
+            <td>GANDER</td>
+            <td>DAGREE</td>
+            <td>LANGUAGE</td>
+            <td>PHOTO</td>
+            <td align="center">ACTION</td>
+        </tr>
+        <tr>
+            <td><%= name%></td>
+            <td><%= address%></td>
+            <td><%= email%></td>
+            <td><%= number%></td>
+            <td><%= gander%></td>
+            <td><%= dagree%></td>
+            <td><%= language %></td>
+            <td><img src="/download?id=<%=nid%>" alt="rose" height="60" width="60"/></td>
+            <td><a href="/update?id=<%=nid%>""><button>UPDATED</button></a>
+                <a href="/changepassword?id=<%=nid%>"><button>CHANGE_PASSWORD</button></a>
+            </td>
+        </tr>   
+    </table>
+    <a href="/show"><button type="submit">BACK_ADMNIN_TABLE</button></a>
+</body>
+</html>
